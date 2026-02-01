@@ -1,0 +1,56 @@
+.card-event {
+  display: flex;
+  flex-direction: column;
+  max-width: 17.625rem;
+  margin: 2rem 0 4rem 0;
+  background-color: #212121;
+}
+
+.card-event img {
+  max-width: 17.625rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+}
+
+.tag {
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: #33353f;
+  color: #ffffff;
+  max-width: 5.375rem;
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+  line-height: 1.5;
+  font-size: 0.625em;
+}
+
+.date {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 0.8125em;
+  color: #ffffff;
+  margin: 0.5rem 0;
+}
+
+.card-title {
+  font-family: "Orbitron", sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5625em;
+  line-height: 1.5;
+}
+
+.text {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}

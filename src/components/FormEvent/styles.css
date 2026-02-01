@@ -1,0 +1,13 @@
+.form-event {
+  background-color: #212121;
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  width: 24rem;
+  max-width: 90%;
+  margin: 4rem auto 3.75rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  text-align: center;
+}

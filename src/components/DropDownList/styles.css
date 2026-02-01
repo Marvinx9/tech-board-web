@@ -1,0 +1,14 @@
+.drop-down-list {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+  background-color: transparent;
+  border: 1px solid #4a4949;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+}
+
+.option-default {
+  color: #4a4949;
+}
