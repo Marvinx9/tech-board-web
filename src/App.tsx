@@ -39,7 +39,8 @@ export function App() {
       tema: "front-end",
       data: new Date(),
       titulo: "Mulheres no Front",
-      text: "Valorizando e impulsionando a participação feminina no desenvolvimento front-end.",
+      texto:
+        "Valorizando e impulsionando a participação feminina no desenvolvimento front-end.",
     },
   ];
 
@@ -60,7 +61,7 @@ export function App() {
               tema={event.tema}
               data={event.data}
               titulo={event.titulo}
-              text={event.text}
+              text={event.texto}
             />
           ))}
         </section>

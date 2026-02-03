@@ -1,10 +1,11 @@
+import "./styles.css";
 import { Button } from "../Button";
 import { DropDownList } from "../DropDownList";
 import { FieldForm } from "../FieldForm";
 import { FieldInput } from "../FieldInput";
 import { Label } from "../Label";
 import { TitleForm } from "../TitleForm";
-import "./styles.css";
+import { FieldText } from "../FieldText";
 
 type Theme = {
   id: number;
@@ -16,25 +17,55 @@ type FormEventProps = {
 };
 
 export function FormEvent({ themes }: FormEventProps) {
+  function handleCreatEvent({ formData }: any) {
+    const event = {
+      capa: formData.get("capaEvento"),
+      tema: themes.find((item) => item.id == formData.get("temaEvento")),
+      data: new Date(formData.get("dateEvento")),
+      titulo: formData.get("nomeEvento"),
+      texto: formData.get("textoEvento"),
+    };
+    console.log(formData);
+  }
+
   return (
-    <form className="form-event">
+    <form className="form-event" action={handleCreatEvent}>
       <TitleForm texto="Preencha para criar um evento:" />
       <FieldForm>
-        <Label htmlFor="nome">Qual o nome do evento?</Label>
+        <Label htmlFor="capaEvento">Qual a capa do evento?</Label>
+        <FieldInput type="text" id="capaEvento" name="capaEvento" />
+      </FieldForm>
+      <FieldForm>
+        <Label htmlFor="nomeEvento">Qual o nome do evento?</Label>
         <FieldInput
           type="text"
-          id="nome"
+          id="nomeEvento"
           placeholder="Summer dev hits"
           name="nomeEvento"
         />
       </FieldForm>
       <FieldForm>
-        <Label htmlFor="dateEvent">Data do evento?</Label>
-        <FieldInput type="date" id="dateEvent" name="dateEvent" />
+        <Label htmlFor="dateEvento">Data do evento?</Label>
+        <FieldInput
+          type="date"
+          id="dateEvento"
+          name="dateEvento"
+          placeholder="dd/mm/aaaa"
+        />
       </FieldForm>
       <FieldForm>
         <Label htmlFor="temaEvento">Tema do evento</Label>
         <DropDownList id="temaEvento" name="temaEvento" items={themes} />
+      </FieldForm>
+      <FieldForm>
+        <Label htmlFor="textoEvento">Descrição do evento</Label>
+        <FieldText
+          type="text"
+          id="textoEvento"
+          placeholder="Breve descrição do evento"
+          name="textoEvento"
+          rows={4}
+        />
       </FieldForm>
       <div className="actions">
         <Button texto="Criar evento" />

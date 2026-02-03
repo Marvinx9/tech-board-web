@@ -16,7 +16,7 @@ export function DropDownList({ items, ...rest }: DropDownListProps) {
         Selecione uma opção
       </option>
       {items.map((item) => (
-        <option key={item.id} value={item.id}>
+        <option className="option" key={item.id} value={item.id}>
           {item.nome}
         </option>
       ))}
