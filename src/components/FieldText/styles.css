@@ -9,3 +9,7 @@
   color: #ffffff;
   resize: none;
 }
+
+.field-text::placeholder {
+  color: #4a4949b2;
+}

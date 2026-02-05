@@ -5,6 +5,7 @@ type FieldInputProps = {
   id: string;
   placeholder?: string;
   name: string;
+  required?: boolean;
 };
 
 export function FieldInput(props: FieldInputProps) {

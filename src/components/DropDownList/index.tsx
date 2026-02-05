@@ -11,7 +11,7 @@ type DropDownListProps = React.ComponentProps<"select"> & {
 
 export function DropDownList({ items, ...rest }: DropDownListProps) {
   return (
-    <select className="drop-down-list" defaultValue="" {...rest}>
+    <select className="drop-down-list" defaultValue="" {...rest} required>
       <option className="option-default" value="" disabled>
         Selecione uma opção
       </option>

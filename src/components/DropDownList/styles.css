@@ -6,13 +6,20 @@
   border: 1px solid #4a4949;
   border-radius: 8px;
   padding: 0.5rem 1rem;
-  color: #ffffff;
+  color: #fff;
 }
 
-.option-default {
-  color: #4a4949;
+.drop-down-list:invalid {
+  color: #4a4949b2;
 }
 
 .option {
   color: #000000;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("/angle-down.svg") no-repeat center right #fff;
 }

@@ -6,9 +6,29 @@
   border: 1px solid #4a4949;
   border-radius: 8px;
   padding: 0.5rem 1rem;
-  color: #ffffff;
+  color: #fff;
+  caret-color: #fff;
 }
 
 .field-input::placeholder {
-  color: #4a4949;
+  color: #4a4949b2;
+}
+
+.field-input:auto-fill {
+  background-color: #000;
+}
+
+.field-input:-webkit-autofill,
+.field-input:-webkit-autofill:hover,
+.field-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 40rem #212121 inset;
+}
+
+.field-input[type="date"]:invalid {
+  color: #4a4949b2;
+}
+
+.field-input::-webkit-calendar-picker-indicator {
+  background-image: url("/calendar.svg");
 }

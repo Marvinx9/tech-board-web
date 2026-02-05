@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import "./styles.css";
 import { Button } from "../Button";
 import { DropDownList } from "../DropDownList";
@@ -17,7 +18,7 @@ type FormEventProps = {
 };
 
 export function FormEvent({ themes }: FormEventProps) {
-  function handleCreatEvent({ formData }: any) {
+  function handleCreatEvent(formData: any) {
     const event = {
       capa: formData.get("capaEvento"),
       tema: themes.find((item) => item.id == formData.get("temaEvento")),
@@ -25,7 +26,6 @@ export function FormEvent({ themes }: FormEventProps) {
       titulo: formData.get("nomeEvento"),
       texto: formData.get("textoEvento"),
     };
-    console.log(formData);
   }
 
   return (
@@ -33,7 +33,12 @@ export function FormEvent({ themes }: FormEventProps) {
       <TitleForm texto="Preencha para criar um evento:" />
       <FieldForm>
         <Label htmlFor="capaEvento">Qual a capa do evento?</Label>
-        <FieldInput type="text" id="capaEvento" name="capaEvento" />
+        <FieldInput
+          type="text"
+          id="capaEvento"
+          name="capaEvento"
+          placeholder="https://image-url"
+        />
       </FieldForm>
       <FieldForm>
         <Label htmlFor="nomeEvento">Qual o nome do evento?</Label>
@@ -51,6 +56,9 @@ export function FormEvent({ themes }: FormEventProps) {
           id="dateEvento"
           name="dateEvento"
           placeholder="dd/mm/aaaa"
+          required={true}
+          // min="2025-01-01"
+          // max="2025-12-31"
         />
       </FieldForm>
       <FieldForm>
