@@ -5,8 +5,9 @@
   background-color: transparent;
   border: 1px solid #4a4949;
   border-radius: 8px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
   color: #fff;
+  cursor: pointer;
 }
 
 .drop-down-list:invalid {
@@ -21,5 +22,8 @@ select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("/angle-down.svg") no-repeat center right #fff;
+  background-image: url("/angle-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 1.1875rem center;
+  background-size: 0.75rem;
 }

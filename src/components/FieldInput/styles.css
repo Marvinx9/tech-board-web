@@ -27,8 +27,10 @@
 
 .field-input[type="date"]:invalid {
   color: #4a4949b2;
+  cursor: pointer;
 }
 
 .field-input::-webkit-calendar-picker-indicator {
   background-image: url("/calendar.svg");
+  cursor: pointer;
 }
