@@ -15,3 +15,15 @@ header {
 body {
   background-color: #06151a;
 }
+
+.container {
+  width: 62.5rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.events {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
